@@ -10,8 +10,6 @@ function capitalizeWords(str) {
     return str.split(' ').map(capitalize).join(' ');
 }
 
-console.log(capitalizeWords('hello world, my name is alexa and i am not a robot'))
-
 function capitalizeHeadline(str) {
     const exceptions = ['the', 'in', 'a', 'an', 'and', 'but', 'for', 'at', 'by', 'from'];
     return str.split(' ').map((word, index) => {
@@ -25,4 +23,15 @@ function capitalizeHeadline(str) {
     }).join(' '); 
 }
 
-console.log(capitalizeHeadline('the cat and the dog sat by the window in order to watch the rain fall'))
+function removeExtraSpaces(str) {
+    let trimmedStr = str.trim();
+    let wordsArray = trimmedStr.split(/ +/);
+    return wordsArray.join(' ');
+}
+
+function advancedRemoveExtraSpaces(str) {
+    let trimmedStr = str.trim();
+    let wordsArray = trimmedStr.split(/\s+/);
+    return wordsArray.join(' ');
+}
+
