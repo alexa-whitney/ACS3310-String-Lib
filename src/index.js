@@ -81,4 +81,10 @@ function camelCase(str) {
     }).join('');
 }
 
-console.log(camelCase('Camel Case this right now'));
+function shift(str, n) {
+	// get all characters except the first 'n'
+	// append those 'n' characters to the end
+	return str.slice(n) + str.slice(0, n);
+}
+
+console.log(shift('alexa ramsden whitney', 3));  
