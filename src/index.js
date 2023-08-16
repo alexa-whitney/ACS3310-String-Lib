@@ -87,4 +87,13 @@ function shift(str, n) {
 	return str.slice(n) + str.slice(0, n);
 }
 
-console.log(shift('alexa ramsden whitney', 3));  
+function makeHashTag(str) {
+	let words = str.split(' ');
+	if (words.length > 3) {
+			words.sort((a, b) => b.length - a.length);
+	}
+
+	return words.slice(0, 3).map(word => '#' + word[0].toUpperCase() + word.slice(1).toLowerCase());
+}
+
+console.log(makeHashTag("Amazing bongo drums for sale")); 
