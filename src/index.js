@@ -35,3 +35,23 @@ function advancedRemoveExtraSpaces(str) {
     return wordsArray.join(' ');
 }
 
+function kebobCase(str) {
+    str = str.toLowerCase();
+
+    let filteredStr = str.split('').filter(char => {
+        let code = char.charCodeAt(0);
+        return (
+            code === 32 ||  // Space
+            (code >= 48 && code <= 57) ||  // Numbers 0-9
+            (code >= 97 && code <= 122) || // a-z
+            code === 45  // Hyphen
+        );
+    }).join('');
+
+    filteredStr = removeExtraSpaces(filteredStr);
+
+    return filteredStr.split(' ').join('-');
+}
+
+console.log(kebobCase(" My     name is     Alexa     Whitney  "));
+
