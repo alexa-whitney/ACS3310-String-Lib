@@ -20,7 +20,7 @@ function capitalizeHeadline(str) {
         } else {
             return capitalize(word);
         }
-    }).join(' '); 
+    }).join(' ');
 }
 
 function removeExtraSpaces(str) {
@@ -69,7 +69,16 @@ function snakeCase(str, separator = "_") {
     filteredStr = removeExtraSpaces(filteredStr);
 
     return filteredStr.split(' ').join(separator);
-}   
+}
 
-console.log(snakeCase("  what the    heck   ")); 
+function camelCase(str) {
+    return str.split(' ').map((word, index) => {
+        if (index === 0) {
+            return word.toLowerCase();
+        } else {
+            return capitalize(word);
+        }
+    }).join('');
+}
 
+console.log(camelCase('Camel Case this right now'));
