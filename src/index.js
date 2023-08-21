@@ -95,28 +95,48 @@ function makeHashTag(str) {
 
 	return words.slice(0, 3).map(word => '#' + word[0].toUpperCase() + word.slice(1).toLowerCase());
 }
+
 function isEmpty(str) {
+	console.log("Testing string:", str);  // Log the original string
+	
 	let trimmedStr = str.trim();
+	console.log("Trimmed string:", trimmedStr);  // Log the trimmed string
 
 	if (trimmedStr === "") {
-		return true;
+			console.log("String is empty after trimming");
+			return true;
 	}
 
 	// Loop over each character in the trimmed string
 	for (let char of trimmedStr) {
-		// If we encounter any character other than \n, \r, or \t, 
-		// it means the string isn't empty or just whitespace
-		if (char !== '\n' && char !== '\r' && char !== '\t') {
-			return false;
-		}
+			console.log("Checking character:", char);  // Log the current character being checked
+
+			// If we encounter any character other than \n, \r, or \t, 
+			// it means the string isn't empty or just whitespace
+			if (char !== '\n' && char !== '\r' && char !== '\t') {
+					console.log("Found non-whitespace character");
+					return false;
+			}
 	}
 
+	console.log("Reached end of string without finding non-whitespace characters");
 	// If we have looped through the entire string and only found whitespace characters, return true
 	return true;
 }
 
-console.log(isEmpty("Abc def"));  // should log false
-console.log(isEmpty("Abc de             f              "));  // should log false
-console.log(isEmpty(`   
-		
-		`));          // should log true
+// For testing purposes:
+console.log(isEmpty(' \n\t\r '));  // Should log details and return true
+console.log(isEmpty(' a \n\t\r '));  // Should log details and return false
+
+module.exports.capitalize = capitalize
+module.exports.allCaps = allCaps
+module.exports.capitalizeWords = capitalizeWords
+module.exports.capitalizeHeadline = capitalizeHeadline
+module.exports.removeExtraSpaces = removeExtraSpaces
+module.exports.advancedRemoveExtraSpaces = advancedRemoveExtraSpaces
+module.exports.kebobCase = kebobCase
+module.exports.snakeCase = snakeCase
+module.exports.camelCase = camelCase
+module.exports.shift = shift
+module.exports.makeHashTag = makeHashTag
+module.exports.isEmpty = isEmpty
