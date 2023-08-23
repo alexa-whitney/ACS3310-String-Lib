@@ -1,13 +1,13 @@
 {
-  "name": "string-lib",
+  "name": "string-o-matic",
   "version": "1.0.0",
-  "description": "",
+  "description": "A vibrant toolkit for your text transformations! Whether you're capitalizing, kebob-casing, or hunting for pesky extra spaces, String-o-Matic has got your back. Dive into a textual adventure with the most fun you've ever had with strings. ",
   "main": "src/index.js",
   "scripts": {
     "test": "jest"
   },
   "keywords": [],
-  "author": "",
+  "author": "Alexa Whitney",
   "license": "ISC",
   "devDependencies": {
     "jest": "^29.6.3"

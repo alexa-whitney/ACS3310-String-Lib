@@ -1,6 +1,6 @@
-# String Utility Library
+# String-o-Matic
 
-A collection of utility functions to manipulate and transform strings.
+A vibrant toolkit for your text transformations! Whether you're capitalizing, kebob-casing, or hunting for pesky extra spaces, String-o-Matic has got your back. Dive into a textual adventure with the most fun you've ever had with strings. 🎉📝
 
 ## Functions
 
