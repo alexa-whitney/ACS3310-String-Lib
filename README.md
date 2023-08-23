@@ -1,5 +1,10 @@
 # String-o-Matic
 
+[![npm version](https://img.shields.io/npm/v/string-o-matic.svg)](https://www.npmjs.com/package/string-o-matic)
+[![npm downloads](https://img.shields.io/npm/dt/string-o-matic.svg)](https://www.npmjs.com/package/string-o-matic)
+
+[NPM Package](https://www.npmjs.com/package/string-o-matic)
+
 A vibrant toolkit for your text transformations! Whether you're capitalizing, kebob-casing, or hunting for pesky extra spaces, String-o-Matic has got your back. Dive into a textual adventure with the most fun you've ever had with strings. 🎉📝
 
 ## Functions
